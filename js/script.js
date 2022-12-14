@@ -28,7 +28,8 @@ createApp({
 					text : 'Olio',
 					done : false
 				},
-			 ]
+			 ],
+			 userToDo : ""
 		}
 	},
 
@@ -39,6 +40,15 @@ createApp({
 			if (toRemoveCheck > -1 ){
 				this.todoList.splice(toRemoveCheck, 1)
 			}
+		},
+
+		sendListItem(){
+			const obj = {};
+			
+			obj['text'] = this.userToDo
+			obj['done'] = false
+
+			this.todoList.push(obj)
 		}
 
     },
