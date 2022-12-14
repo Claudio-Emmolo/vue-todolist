@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp({
 	data() {
 		return{
-             dotolist : [
+             todoList : [
 				{
 					text : 'Latte',
 					done : true

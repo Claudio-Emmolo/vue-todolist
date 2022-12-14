@@ -22,17 +22,8 @@
         <main>
             <div class="todolist">
                 <ul>
-                    <li>
-                        ITEM
-                    </li>
-                    <li>
-                        ITEM
-                    </li>
-                    <li>
-                        ITEM
-                    </li>
-                    <li>
-                        ITEM
+                    <li v-for="(item) in todoList">
+                        {{ item.text }}
                     </li>
                 </ul>
             </div>
