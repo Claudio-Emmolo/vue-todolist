@@ -43,13 +43,17 @@ createApp({
 		},
 
 		sendListItem(){
-			const obj = {};
-
-			obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase();
-			obj['done'] = false;
-
-			this.todoList.push(obj);
-			this.userToDo = "";
+			if(this.todoList.some(this.todoList => this.todoList.name === this.userToDo)  && (this.userToDo < 1) ){
+				console.log('Item già scritto')
+			} else {
+				const obj = {};
+				
+				obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase();
+				obj['done'] = false;
+				
+				this.todoList.push(obj);
+				this.userToDo = "";
+			}
 		},
 
 		swichDone(item){
