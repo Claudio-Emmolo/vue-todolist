@@ -9,3 +9,9 @@ header,
 main{
     padding: 2.5rem;
 }
+
+.line-through{
+    text-decoration: line-through;
+    color: red;
+} 
+    

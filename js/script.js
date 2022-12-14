@@ -6,27 +6,27 @@ createApp({
              todoList : [
 				{
 					text : 'Latte',
-					done : true
+					done : false
 				},
 				{
 					text : 'Zucchero',
-					done : true
+					done : false
 				},
 				{
 					text : 'Uova',
-					done : false
+					done : true
 				},
 				{
 					text : 'Pasta',
-					done : false
+					done : true
 				},
 				{
 					text : 'Biscotti',
-					done : true
+					done : false
 				},
 				{
 					text : 'Olio',
-					done : true
+					done : false
 				},
 			 ]
 		}

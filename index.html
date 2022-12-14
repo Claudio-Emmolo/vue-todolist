@@ -22,7 +22,7 @@
         <main>
             <div class="todolist">
                 <ul>
-                    <li v-for="(item) in todoList">
+                    <li v-for="(item) in todoList" :class="(item.done) ? 'line-through' : '' ">
                         {{ item.text }}
                     </li>
                 </ul>
