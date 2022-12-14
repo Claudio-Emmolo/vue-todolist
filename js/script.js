@@ -34,6 +34,13 @@ createApp({
 
     methods: {
 
+		removeToDo(itemToRemove){
+			const toRemoveCheck = this.todoList.indexOf(itemToRemove);
+			if (toRemoveCheck > -1 ){
+				this.todoList.splice(toRemoveCheck, 1)
+			}
+		}
+
     },
 
 }).mount ('#app')

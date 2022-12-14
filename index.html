@@ -22,8 +22,12 @@
         <main>
             <div class="todolist">
                 <ul>
-                    <li v-for="(item) in todoList" :class="(item.done) ? 'line-through' : '' ">
-                        {{ item.text }}
+                    <li v-for="(item) in todoList">
+                        <span :class="(item.done) ? 'line-through' : '' ">
+                            {{ item.text }}
+                        </span>
+
+                        <i class="fa-solid fa-xmark" @click="removeToDo(item)"></i>
                     </li>
                 </ul>
             </div>
