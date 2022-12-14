@@ -24,6 +24,18 @@ div.todolist{
     width: 30%;
 }
 
+div.swich-done{
+    border: 1px solid red;
+    width: 90%;
+    padding: .8rem;
+
+}
+
+div.icon-close{
+    display: flex;
+    margin: auto
+}
+
 div.todolist ul{
     list-style-type: none;
     font-size: 2rem;
@@ -31,10 +43,10 @@ div.todolist ul{
 
 div.todolist ul li{
     border: 3px solid black;
-    padding: .8rem;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
+
 
     

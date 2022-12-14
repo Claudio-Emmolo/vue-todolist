@@ -24,12 +24,16 @@
         <main>
             <div class="todolist">
                 <ul>
-                    <li v-for="(item, index) in todoList" @click="swichDone(index)">
-                        <span :class="(item.done) ? 'line-through' : '' ">
-                            {{ item.text }}
-                        </span>
+                    <li v-for="(item, index) in todoList">
+                        <div class="swich-done" @click="swichDone(index)">
+                            <span :class="(item.done) ? 'line-through' : '' ">
+                                {{ item.text }}
+                            </span>
+                        </div>
 
-                        <i class="fa-solid fa-xmark" @click="removeToDo(item)"></i>
+                        <div class="icon-close">
+                            <i class="fa-solid fa-xmark" @click="removeToDo(item, index)"></i>
+                        </div>
                     </li>
                 </ul>
             </div>

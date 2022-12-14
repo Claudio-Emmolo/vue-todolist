@@ -35,27 +35,27 @@ createApp({
 
     methods: {
 
-		removeToDo(itemToRemove){
+		removeToDo(itemToRemove, item){
 			const toRemoveCheck = this.todoList.indexOf(itemToRemove);
 			if (toRemoveCheck > - 1 ){
-				this.todoList.splice(toRemoveCheck, 1)
+				this.todoList.splice(toRemoveCheck, 1);
 			}
 		},
 
 		sendListItem(){
 			const obj = {};
 
-			obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase()
-			obj['done'] = false
+			obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase();
+			obj['done'] = false;
 
-			this.todoList.push(obj)
+			this.todoList.push(obj);
 		},
 
 		swichDone(item){
 			if(!this.todoList[item].done){
-				this.todoList[item].done = true
+				this.todoList[item].done = true;
 			} else {
-				this.todoList[item].done = false
+				this.todoList[item].done = false;
 			}
 		}
 
