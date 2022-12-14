@@ -30,7 +30,7 @@ createApp({
 				},
 			 ],
 			 userToDo : "",
-			 errorText : false
+			 errorText : false,
 		}
 	},
 
@@ -49,9 +49,13 @@ createApp({
 
 			if(todoList.some(todoList => todoList.text.toLowerCase() === this.userToDo.toLowerCase())  || (this.userToDo.length <= 1) ){
 				console.log('Item già scritto');
-				this.errorText = true
+				this.errorText = true;
+				setTimeout (() => {
+					this.userToDo = "";
+					this.errorText = false;
+				} , 1000);
 			} else {
-				this.errorText = false
+				this.errorText = false;
 
 				const obj = {};
 				
