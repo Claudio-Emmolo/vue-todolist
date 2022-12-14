@@ -27,6 +27,7 @@
             <h1>To Do List</h1>
             <div class="user-input">
                 <input type="text" placeholder="Cosa vuoi inserire nella tua lista?" v-model.trim="userToDo" @keyup.enter="sendListItem">
+                <span class="error-insert" :class="(errorText) ? 'error-insert-block' : '' ">Error! Elemento già inserito o caratteri insufficienti</span>
                 <button @click="sendListItem">Aggiungi</button>
             </div>
         </header>

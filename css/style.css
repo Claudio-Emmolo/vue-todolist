@@ -41,7 +41,6 @@ div.user-input input{
     display: block;
     margin: auto;
     margin-bottom: .5rem;
-
 }
 
 div.user-input button{
@@ -59,6 +58,19 @@ div.user-input button{
 div.user-input button:hover{
     background-color: greenyellow;
 }
+
+span.error-insert{
+    display: none;
+    padding-bottom: 1.5rem;
+    color: red;
+    font-weight: 100;
+}
+span.error-insert-block{
+    display: block;
+}
+
+/* --------------------MAIN-------------------- */
+
 
 div.todolist{
     width: 30%;

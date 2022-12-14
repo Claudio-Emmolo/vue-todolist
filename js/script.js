@@ -29,7 +29,8 @@ createApp({
 					done : false
 				},
 			 ],
-			 userToDo : ""
+			 userToDo : "",
+			 errorText : false
 		}
 	},
 
@@ -43,9 +44,15 @@ createApp({
 		},
 
 		sendListItem(){
-			if(this.todoList.some(this.todoList => this.todoList.name === this.userToDo)  && (this.userToDo < 1) ){
-				console.log('Item già scritto')
+
+			const todoList = this.todoList
+
+			if(todoList.some(todoList => todoList.text.toLowerCase() === this.userToDo.toLowerCase())  || (this.userToDo.length <= 1) ){
+				console.log('Item già scritto');
+				this.errorText = true
 			} else {
+				this.errorText = false
+
 				const obj = {};
 				
 				obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase();
