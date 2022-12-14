@@ -17,7 +17,7 @@
 
         <header>
             <h1>To Do List</h1>
-            <input type="text" v-model="userToDo">
+            <input type="text" v-model.trim="userToDo" @keyup.enter="sendListItem">
             <button @click="sendListItem">Aggiungi</button>
         </header>
 

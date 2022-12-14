@@ -37,15 +37,15 @@ createApp({
 
 		removeToDo(itemToRemove){
 			const toRemoveCheck = this.todoList.indexOf(itemToRemove);
-			if (toRemoveCheck > -1 ){
+			if (toRemoveCheck > - 1 ){
 				this.todoList.splice(toRemoveCheck, 1)
 			}
 		},
 
 		sendListItem(){
 			const obj = {};
-			
-			obj['text'] = this.userToDo
+
+			obj['text'] = this.userToDo.charAt(0).toUpperCase() + this.userToDo.substring(1).toLowerCase()
 			obj['done'] = false
 
 			this.todoList.push(obj)
