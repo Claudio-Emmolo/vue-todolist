@@ -34,6 +34,7 @@ div.todolist ul li{
     padding: .8rem;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
     

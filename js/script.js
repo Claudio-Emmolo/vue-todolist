@@ -49,6 +49,14 @@ createApp({
 			obj['done'] = false
 
 			this.todoList.push(obj)
+		},
+
+		swichDone(item){
+			if(!this.todoList[item].done){
+				this.todoList[item].done = true
+			} else {
+				this.todoList[item].done = false
+			}
 		}
 
     },
