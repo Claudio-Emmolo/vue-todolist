@@ -49,6 +49,7 @@ createApp({
 			obj['done'] = false;
 
 			this.todoList.push(obj);
+			this.userToDo = "";
 		},
 
 		swichDone(item){
